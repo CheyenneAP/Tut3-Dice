@@ -75,6 +75,9 @@ void Dice::display(){
 
 int main(){
 	Dice myDiObj;
-	cout << " my Dice has rolled" << myDiObj.rollnum << endl;
+	cout << " Number of times Dice has rolled" << myDiObj.rollnum() << endl;
+	cout << "Dice outcomes for " << myDiObj.rollnum();
+	cout << "rolls is equal to " << endl;
+	
 
 }
