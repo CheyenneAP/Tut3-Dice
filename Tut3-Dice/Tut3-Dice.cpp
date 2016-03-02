@@ -11,10 +11,33 @@ private:
 
 public:
 	Dice(void);
-	int roll(void);
-	int rollnum();
-	int rollcounter();
+	int rollOutcome(void); // outcome on the dice 
+	int rollnum(); // number of times dice is rolled 
+	
 
 };
 
+Dice::Dice(){
+	rollcount = 0;
+	srand(time(NULL));
 
+}// end Dice
+
+
+// returns result of a roll
+int Dice::rollOutcome(){
+	rollcount++;
+	return(rand() % 6) + 1;
+
+}
+
+// number of times dice is rolled 
+int Dice::rollnum(){
+	return rollcount;
+} // end rollnum
+
+
+int main(){
+	Dice myDiObj;
+	cout << " my Dice has rolled" << myDiObj.rollnum << endl;
+}
