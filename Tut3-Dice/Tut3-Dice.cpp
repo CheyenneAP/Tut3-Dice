@@ -15,8 +15,8 @@ public:
 	int rollOutcome(void); // outcome on the dice 
 	int rollnum(); // number of times dice is rolled 
 	float average(Dice);
-	float average();
-	void display();
+	float average(); // average of the outcomes 
+	void display(); // display for better viewing
 	
 };
 
@@ -77,11 +77,11 @@ void Dice::display(){
 
 
 int main(){
+	 // make a reference
 	Dice myDiObj;
 
 
 	myDiObj.display();
-
 	 float a = myDiObj.average();
 	 cout << "average of the  outcomes  = " << a << endl;
 
